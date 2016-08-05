@@ -122,10 +122,6 @@ module.exports = function makeRouterWithSockets(io) {
 
 
     });
-    // // replaced this hard-coded route with general static routing in app.js
-    // router.get('/stylesheets/style.css', function(req, res, next){
-    //   res.sendFile('/stylesheets/style.css', { root: __dirname + '/../public/' });
-    // });
 
     return router;
 }

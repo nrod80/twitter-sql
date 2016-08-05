@@ -13,10 +13,61 @@ body {
   width: 50%;
 }
 
+.col-md-3 {
+  width: 350px;
+}
+
 .user {
-  height: 150px;
-  width: 250px;
+  border-radius: 5px;
+  height: 200px;
+  width: 300px;
   background-color: #fff;
+}
+
+.prof-pic {
+  float: left;
+  position: fixed;
+  margin: -28px 0 0 10px;
+  height: 70px;
+  width: 70px;
+  border: 3px white solid;
+  border-radius: 5px;
+}
+
+.cover-photo img {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  margin: 0;
+  float: top;
+  height: 100px;
+  width: 300px;
+}
+
+.username {
+  margin-left: 85px;
+  padding-top: 5px;
+}
+
+.user-stats {
+  margin-top: 15px;
+}
+
+.user-stats li {
+  /*background-color: #ccc;*/
+  display: inline;
+  float: left;
+  margin: 5px;
+  font-size: 12px;
+  text-align: left;
+}
+
+.following .followers . tweet-number {
+  position: relative;
+  text-align: center;
+}
+
+.tweets-label, .following-label, .followers-label {
+  color: #bbb;
 }
 
 #tweetcol {
@@ -50,19 +101,20 @@ body {
 
 }
 
-img {
+.tweetbox img {
   border-radius: 5px;
   height: 48px;
   width: 48px;
-}
-
-.tweetbox img {
   float: left;
 }
 
 p .name {
   position: relative;
   z-index: 5;
+}
+
+a {
+  color: black;
 }
 
 .content {

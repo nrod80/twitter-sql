@@ -1,7 +1,7 @@
 // setting up the node-postgres driver
 var pg = require('pg');
 var client = new pg.Client({
-    user: 'chrislocasto',
+    user: 'nickrodriguez',
     database: 'twitter'
 });
 

@@ -1,48 +1,58 @@
 {% extends "layout.html" %}
-
 {% block content %}
-
   <div class="row">
     <div class="col-md-3">
       <div class="user">
-      <img src="https://pbs.twimg.com/profile_images/2450268678/olxp11gnt09no2y2wpsh_normal.jpeg"><br>
-      <b>NIMIT</b><br>
-      100 followers
+        <div class="cover-photo">
+          <img src="cover.jpg">
+        </div>
+        <img class="prof-pic" src="https://pbs.twimg.com/profile_images/699880409421717504/_AWaL0gG_400x400.jpg">
+        <div class ="username">
+          <b>Nick Rodriguez</b><br>
+        </div>
+        <div class="user-stats">
+        <ul>
+          <li><div id="tweets">
+            <p class="tweets-label">TWEETS</p>
+            <p class="tweet-number">100</p>
+          </div></li>
+         <li><div id="following">
+            <p class="following-label">FOLLOWING</p>
+            <p class="following">100</p>
+          </div></li>
+          <li><div id="followers">
+            <p class="followers-label">FOLLOWERS</p>
+            <p class="followers">100</p>
+          </div></li>
+          </ul>
+        </div>
       </div>
     </div>
     <div class="col-md-9">
-
       <!-- display tweets here -->
       <div id="tweetcol">
-      {% if showForm %}
-      <div class="form">
-        <form action="/tweets" method="POST">
-          <label for="name_field">Name:</label>
-          <input name="name" type="text" id="name_field" value="{{ username }}"/>
-
-          <label for="text_field">Text:</label>
-          <input name="content" type="text" id="text_field" />
-
-          <input type="submit" value="Submit" />
-        </form>
-      {% endif %}
-      </div>
-      {% for tweet in tweets | reverse %}
-        
-        <div class="tweetbox">
-          <a href="/tweets/{{ tweet.tweetid }}"></a>
-          <img src="{{tweet.pictureurl}}">
-          <div class="content">
-            <p class="name"><a href="/users/{{ tweet.userid }}">{{tweet.name}}</a></p>
-            <p class="text">{{tweet.content}}</p>
-          </div>
+        {% if showForm %}
+          <div class="form">
+            <form action="/tweets" method="POST">
+              <label for="name_field">Name:</label>
+              <input name="name" type="text" id="name_field" value="{{ username }}"/>
+              <label for="text_field">Text:</label>
+              <input name="content" type="text" id="text_field" />
+              <input type="submit" value="Submit" />
+            </form>
+          {% endif %}
         </div>
-      {% endfor %}
+        {% for tweet in tweets | reverse %}
+          <div class="tweetbox">
+            <a href="/tweets/{{ tweet.tweetid }}"></a>
+            <img src="{{tweet.pictureurl}}">
+            <div class="content">
+              <p class="name"><a href="/users/{{ tweet.userid }}">{{tweet.name}}</a></p>
+              <p class="text">{{tweet.content}}</p>
+            </div>
+          </div>
+        {% endfor %}
       </div>
-
     </div>
   </div>
-
-
 {% endblock %}
-
