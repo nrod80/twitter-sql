@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+  <div class="row">
+    <div class="col-md-3">
+      <div class="user">
+      <img src="https://pbs.twimg.com/profile_images/2450268678/olxp11gnt09no2y2wpsh_normal.jpeg"><br>
+      <b>NIMIT</b><br>
+      100 followers
+      </div>
+    </div>
+    <div class="col-md-9">
+
+      <!-- display tweets here -->
+      <div id="tweetcol">
+      {% if showForm %}
+      <div class="form">
+        <form action="/tweets" method="POST">
+          <label for="name_field">Name:</label>
+          <input name="name" type="text" id="name_field" value="{{ username }}"/>
+
+          <label for="text_field">Text:</label>
+          <input name="content" type="text" id="text_field" />
+
+          <input type="submit" value="Submit" />
+        </form>
+      {% endif %}
+      </div>
+      {% for tweet in tweets | reverse %}
+        
+        <div class="tweetbox">
+          <a href="/tweets/{{ tweet.tweetid }}"></a>
+          <img src="{{tweet.pictureurl}}">
+          <div class="content">
+            <p class="name"><a href="/users/{{ tweet.userid }}">{{tweet.name}}</a></p>
+            <p class="text">{{tweet.content}}</p>
+          </div>
+        </div>
+      {% endfor %}
+      </div>
+
+    </div>
+  </div>
+
+
+{% endblock %}
+

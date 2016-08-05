@@ -1,0 +1,119 @@
+html,
+body {
+  height: 100%;
+  background: #F2F6F9;
+  /* The html and body elements cannot have any padding or margin. */
+}
+
+.navbar {
+  background-color: #fff;
+}
+
+.col-md-9 {
+  width: 50%;
+}
+
+.user {
+  height: 150px;
+  width: 250px;
+  background-color: #fff;
+}
+
+#tweetcol {
+  background-color: #DFEFF5;
+  border: 1px #eee solid;
+  border-bottom: none;
+  border-radius: 5px;
+  padding: 0px;
+}
+
+.form {
+  padding: 15px;
+}
+
+.tweetbox {
+  position: relative;
+  z-index: 1;
+  background-color: #fff;
+  padding: 7px;
+  border-top: 1px #eee solid;
+}
+
+.tweetbox:hover {
+  background-color: #F2F6F9;
+}
+
+.tweetbox:last-child {
+  border-bottom: 1px #eee solid;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+
+}
+
+img {
+  border-radius: 5px;
+  height: 48px;
+  width: 48px;
+}
+
+.tweetbox img {
+  float: left;
+}
+
+p .name {
+  position: relative;
+  z-index: 5;
+}
+
+.content {
+  margin-left: 60px;
+}
+.content .name {
+  font-weight: bold;
+}
+
+.submit {
+  margin-top: 5px;
+}
+
+.tweet-submit {
+  background-color: #90caf9;
+  padding: 5px;
+}
+
+/* Wrapper for page content to push down footer */
+#wrap {
+  min-height: 100%;
+  height: auto;
+  /* Negative indent footer by its height */
+  margin: 0 auto -60px;
+  /* Pad bottom by footer height */
+  padding: 0 0 60px;
+}
+
+/* Set the fixed height of the footer here */
+#footer {
+  height: 60px;
+  background-color: #f5f5f5;
+}
+
+
+/* Custom page CSS
+-------------------------------------------------- */
+/* Not required for template or sticky footer method. */
+
+#wrap > .container {
+  padding: 60px 15px 0;
+}
+.container .text-muted {
+  margin: 20px 0;
+}
+
+#footer > .container {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+code {
+  font-size: 80%;
+}
